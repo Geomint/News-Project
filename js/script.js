@@ -6,8 +6,16 @@ $(document).ready(function() {
         accepts: {
             xml: "application/rss+xml"
         },
+        url: feed,
         dataType: "xml",
-    }).done(function(data) {
-        console.log(data);
+        type: "GET",
+        success: xmlParser
     });
+    
 });
+
+    function xmlParser(feed) {
+        $(feed).find("item").each(function(){
+           $("#item").append('<div class="item">' +$(this).text() + '</div>') 
+        });
+    }
