@@ -9,13 +9,16 @@ $(document).ready(function() {
         url: feed,
         dataType: "xml",
         type: "GET",
-        success: xmlParser
+        success: xmlGet
     });
-    
+
 });
 
-    function xmlParser(feed) {
-        $(feed).find("item").each(function(){
-           $("#item").append('<div class="item">' +$(this).text() + '</div>') 
-        });
-    }
+function xmlGet(feed) {
+    $(feed).find("item").each(function() {
+        $("#container").append('<div class="title" id="title">' + $(this).find("title").text() + '<div class="description" id="description">' + $(this).find("description").text() +  '<a href="#" class="link" id="link">' + $(this).find("link").text() + '</div>' + '</div>')
+    });
+    
+    
+    
+}
