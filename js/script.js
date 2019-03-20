@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+
+/*** requests xml feed from the .php file ***/
+
     var feed = "/bbsnewsfeed.php";
 
     $.ajax(feed, {
@@ -13,6 +16,9 @@ $(document).ready(function() {
     });
 
 });
+
+
+/*** Appends content into divs ***/
 
 function xmlGet(feed) {
     $(feed).find("item").each(function() {
