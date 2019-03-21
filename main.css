@@ -29,4 +29,18 @@
   transition: all 0.35s ease-in-out;
   color: #fc7233; }
 
+.loader {
+  margin-top: 100px; }
+
+#toTop {
+  display: none;
+  background-color: #fc7233;
+  border-radius: 4px;
+  font-family: verdana;
+  font-size: 20px;
+  color: #fff; }
+
+.size {
+  height: 75px; }
+
 /*# sourceMappingURL=main.css.map */
