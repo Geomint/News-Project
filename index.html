@@ -20,26 +20,24 @@
 <body id="background">
 
     <!--- Navbar --->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Breaking News</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <nav class="size navbar fixed-top navbar-expand-xl navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"><h1>Breaking News</h1></a>
+        <button onclick="topFunction()" id="toTop" title="Go to top">Back to the Top</button>
     </nav>
 
 
     <!--- Loading Gif --->
-    <div class="container">
-        <div class="row justify-content-center">
-        <div class="loading">
-            <img src="/assets/images/gifs/Gear-2.4s-200px.gif" id="load" width="150" height="150"><span id="load2">Loading please wait.</span></img>
-        </div>
+    <div class="container loader">
+        <div class="row align-items-center justify-content-center">
+            <div class="loading">
+                <img src="/assets/images/gifs/Gear-2.4s-200px.gif" id="load" width="150" height="150"><span id="load2">Loading please wait.</span></img>
+            </div>
         </div>
     </div>
 
     <!--- Destination for AJAX --->
     <div id="container"></div>
-    
+
 </body>
 
 </html>
