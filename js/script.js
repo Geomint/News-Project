@@ -29,10 +29,10 @@ function xmlGet(feed) {
     $("#load2").fadeOut();
 
     $(feed).find("item").each(function() {
-        $("#container").append('<div class="title" id="title">' +
+        $("#container").append('<div class="col-lg-8 col-md-10 col-sm-10 col-12 title" id="title">' +
             $(this).find("title").text() + '<div class="description" id="description">' + $(this).find("description").text() 
             + '<br>' 
-            + '<img src="' + $(this).find("media:thumbnail").attr("url") + '" width="200" height="200"'+'/>'
+            + '<img src="' + $(this).find("media:thumbnail").text() + '" width="200" height="200"'+'/>'
             + '<div class="date">' + $(this).find("pubDate").text() + '</div>'
             + '<a  class="link" href="' + $(this).find("link").text() + '"' 
             + 'target="_blank"' 
@@ -41,4 +41,25 @@ function xmlGet(feed) {
             + '</div>');
     });
 
+}
+
+
+
+
+/*** back to top function ***/
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 1000) {
+    document.getElementById("toTop").style.display = "block";
+  } else {
+    document.getElementById("toTop").style.display = "none";
+  }
+}
+
+
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
